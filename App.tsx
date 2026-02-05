@@ -123,14 +123,14 @@ const StudyMode: React.FC<{
   const handleNext = () => {
     if (currentIndex < studyDeck.length - 1) {
       setIsFlipped(false);
-      setTimeout(() => setCurrentIndex(prev => prev + 1), 200);
+      setCurrentIndex(prev => prev + 1);
     }
   };
 
   const handlePrev = () => {
     if (currentIndex > 0) {
       setIsFlipped(false);
-      setTimeout(() => setCurrentIndex(prev => prev - 1), 200);
+      setCurrentIndex(prev => prev - 1);
     }
   };
 
@@ -234,7 +234,7 @@ const StudyMode: React.FC<{
       {/* Card Area - Fixed Layout to prevent collapsing */}
       <div className="w-full perspective-[1000px] h-[400px]">
         <div 
-          className="relative w-full h-full cursor-pointer transition-transform duration-500 [transform-style:preserve-3d]"
+          className="relative w-full h-full cursor-pointer [transform-style:preserve-3d]"
           style={{ transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
           onClick={handleFlip}
         >
