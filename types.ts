@@ -8,7 +8,7 @@ export interface Flashcard {
 
 export type QuizState = 'idle' | 'playing' | 'result';
 
-export type AppMode = 'study' | 'quiz' | 'manage' | 'settings';
+export type AppMode = 'study' | 'quiz' | 'manage' | 'settings' | 'list';
 
 export interface QuizResult {
   total: number;
